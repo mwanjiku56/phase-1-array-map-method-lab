@@ -12,5 +12,12 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+  return tutorials.map((item) =>
+  item
+      .split(" ")    //splits words 
+      .map((item) => item.charAt(0).toUpperCase() + item.slice(1))  //first letter in each word is converted into caps
+      .join(" ") //joins 
+  );
+};
+
+
